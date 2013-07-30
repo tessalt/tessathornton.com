@@ -20,6 +20,7 @@ class Star
 		@circle  = canvas.circle startX, startY, @radius
 		@circle.attr "fill", colours[fill]
 		@circle.attr "opacity", @opacity
+		@circle.attr "stroke-width", 0
 	
 	twinkle: ->		
 		pulseOut = () => 
@@ -58,7 +59,7 @@ twinkleStars = () ->
 	star = Math.floor(Math.random() * stars.length)
 	stars[star].twinkle()
 
-createStars(600)
+createStars(800)
 
 setInterval createShootingStar, 500
 
