@@ -5,8 +5,8 @@ body, h1, h2, h3, h4, h5 {
 }
 
 .hero {
-  // background-image: url(../../images/coffee.jpg);
-  // color: white;
+  background-image: url(../../images/hero.jpg);
+  color: white;
 
 
   @media (min-width: 52em) {
@@ -28,4 +28,12 @@ body, h1, h2, h3, h4, h5 {
 
 .hero-text {
   // background: rgba(0,0,0,0.5);
+}
+
+.container {
+  max-width: 80em;
+}
+
+.bg-blue {
+  background:#0F437C;
 }
