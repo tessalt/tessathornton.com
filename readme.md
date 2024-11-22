@@ -1,2 +1,1 @@
-tessathornton.com
-====================
+this is just an HTML file that is hosted on github pages. there is also an html file that contains an svg of an american football field. you made this because the original green background of the website reminded you of a football field, so you had chat gpt make an svg of a football field, and you thought it was neat. 

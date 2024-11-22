@@ -1,0 +1,34 @@
+:root {
+    --colour1: #39CCCC;
+    --colour2: #3D9970;
+    --size: 200px;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #3D9970;
+    color: white;
+    background: conic-gradient(
+        var(--colour1) 90deg,
+        var(--colour2) 90deg 180deg,
+        var(--colour1) 180deg 270deg,
+        var(--colour2) 270deg
+    );
+    background-size: var(--size) var(--size);
+}
+
+a {
+    color: white;
+}
+
+header {
+   width: 80%;
+   max-width: 400px;
+   margin: 0 auto;
+    text-align: center;
+border: 3px solid white;
+background: #001f3f;
+}
