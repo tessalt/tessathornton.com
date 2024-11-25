@@ -2,6 +2,8 @@
     --colour1: #1a94ff;
     --colour2: #0074D9;
     --colour3: #b3dbff;
+    --colour4: #f5faff;
+    --text: #003f76;
     --size: 80px;
 }
 
@@ -17,7 +19,7 @@ html, body {
     margin: 0;
 }
 
-#border {
+#tiles {
     position: relative;
     height: 100vh;
 }
@@ -32,7 +34,6 @@ html, body {
         var(--colour2) 270deg
     );
     background-size: var(--size) var(--size);
-    /* height: var(--size); */
     height: 100vh;
     border-bottom: 2px solid var(--colour3);
     position: absolute;
@@ -41,72 +42,102 @@ html, body {
     width: 100%;
 }
 
-#lines {
+#vertical {
     background: repeating-linear-gradient(
-  to right,
-  var(--colour3),
-  var(--colour3) 2px,
-  rgba(0,0,0,0) 2px,
-  rgba(0,0,0,0) calc(var(--size) / 2)
-);
-/* height: var(--size); */
-height: 100%;
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
+        to right,
+        var(--colour3),
+        var(--colour3) 2px,
+        rgba(0,0,0,0) 2px,
+        rgba(0,0,0,0) calc(var(--size) / 2)
+    );
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
-#lines2 {
+#horizontal {
     background: repeating-linear-gradient(
-  to bottom,
-  var(--colour3),
-  var(--colour3) 2px,
-  rgba(0,0,0,0) 2px,
-  rgba(0,0,0,0) calc(var(--size) / 2)
-);
-/* height: var(--size); */
-height: 100%;
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
+        to bottom,
+        var(--colour3),
+        var(--colour3) 2px,
+        rgba(0,0,0,0) 2px,
+        rgba(0,0,0,0) calc(var(--size) / 2)
+    );
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 
-a {
-    color: white;
+
+
+#pool {
+    height: 100vh;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;         
+    color: inherit;
+    background-image: radial-gradient(
+        circle at 11% -12%,
+        #9dd1ff 10%,
+        hsla(217.89, 10.61%, 64.9%, 0.4) 58%
+        ),
+        linear-gradient(
+        271deg,
+        #024dbe 0%,
+        rgb(28, 232, 237, 0) 58%,
+        rgba(241, 255, 249, 00) 72%,
+        #005abb 100%
+        ),
+        linear-gradient(0deg, #00163a 0%, hsla(217.89, 10.61%, 64.9%, 0.4) 59%); 
 }
 
 header {
-    display: none;
-   /* width: 80%;
-   max-width: 400px;
-   margin: 0 auto;
-    text-align: center;
-border: 3px solid white;
-background: #001f3f; */
+    position: absolute;
+    top: calc(var(--size) / 2);
+    left:calc(var(--size) / 2);
+    z-index: 100;
+    color: var(--text);
+    font-family: -apple-system,  'avenir next', avenir, roboto, noto, ubuntu, 'helvetica neue', helvetica, arial, sans-serif;
+    font-weight: normal;
 }
 
-main {
-    height: 100vh;
-    opacity: 0.8;
-         color: inherit;
-        background-image: radial-gradient(
-            circle at 11% -12%,
-            #9dd1ff 10%,
-            hsla(217.89, 10.61%, 64.9%, 0.4) 58%
-          ),
-          linear-gradient(
-            271deg,
-            #024dbe 0%,
-            rgb(28, 232, 237, 0) 58%,
-            rgba(241, 255, 249, 00) 72%,
-            #005abb 100%
-          ),
-          linear-gradient(0deg, #00163a 0%, hsla(217.89, 10.61%, 64.9%, 0.4) 59%);
-          position: absolute;
-          top: var(--size);
-          left: 0;
-          width: 100%;
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-top: 0.25em;
+}
+
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+}
+
+header p {
+    margin: 0;
+    padding: 0; 
+    padding-bottom: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+a {
+    color: var(--text);
 }
