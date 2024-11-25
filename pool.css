@@ -78,15 +78,6 @@ a {
     color: white;
 }
 
-header {
-    display: none;
-   /* width: 80%;
-   max-width: 400px;
-   margin: 0 auto;
-    text-align: center;
-border: 3px solid white;
-background: #001f3f; */
-}
 
 main {
     height: 100vh;
