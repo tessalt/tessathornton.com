@@ -14,6 +14,8 @@
           li.innerHTML = `<p><a href="${child.url}">${author} replied ${child.content.text}</a>`
         } else if (child['wm-property'] == 'like-of') {
           li.innerHTML = `<p><a href="${child.url}">${author} liked this</a>`   
+        } else if (child['wm-property'] == 'repost-of') {
+          li.innerHTML = `<p><a href="${child.url}">${author} reposted this</a>`   
         }
       })
     }); 
